@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- START CHATBOX WOLKVOX-->
-  <script id="prodId" type="text/javascript" src="https://widget02.wolkvox.com/chat/?prodId=Y29vbWV2YS1iYW5jb21ldmEyLjc1NA==" async=""></script>
-<!-- END CHATBOX WOLKVOX-->
+<div id="mr-wizard-widget"></div>
+<script>
+  var iframe = document.createElement('iframe');
+  iframe.src = 'https://widget-mrwizardpublic-core.wolkvox.com/?id_config=Y29vbWV2YS1kZW1vc3xpcGRpYWxib3gwMDE5';
+  iframe.width = '100%';
+  iframe.height = '600px';
+  iframe.style.border = 'none';
+  document.getElementById('mr-wizard-widget').appendChild(iframe);
+</script>
 <body>  
 </body>
 </html>
