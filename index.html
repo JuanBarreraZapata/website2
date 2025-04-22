@@ -1,19 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ReUse - Compra y Venta de Materiales Sostenibles</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2ecc71;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f1c40f;
+            color: #333;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f39c12;
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: #2ecc71;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<div id="mr-wizard-widget"></div>
-<script>
-  var iframe = document.createElement('iframe');
-  iframe.src = 'https://widget-mrwizardpublic-core.wolkvox.com/?id_config=Y29vbWV2YS1kZW1vc3xpcGRpYWxib3gwMDE5';
-  iframe.width = '100%';
-  iframe.height = '600px';
-  iframe.style.border = 'none';
-  document.getElementById('mr-wizard-widget').appendChild(iframe);
-</script>
-<body>  
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="ReuseImagen.jpg" alt="Logo ReUse">
+                    <span>ReUse</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#compra-venta">Compra/Vende</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#nosotros">¿Quiénes somos?</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transforma lo usado en oportunidades</h1>
+                <p>Compra y vende materiales de construcción, muebles y más de forma sostenible</p>
+                <a href="#compra-venta" class="btn">¡Empieza ahora!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Catálogo de Materiales</h3>
+                    <p>Explora cientos de materiales listos para darles una segunda vida</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Compra/Vende</h3>
+                    <p>Plataforma segura para transacciones entre particulares y empresas</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Blog Educativo</h3>
+                    <p>Aprende sobre reciclaje, upcycling y construcción sostenible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#terminos">Términos</a>
+                <a href="#privacidad">Privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <p>&copy; 2023 ReUse. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
